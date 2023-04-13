@@ -10,23 +10,17 @@ async def root():
 
 @app.get("/search/{value}")
 async def search(value: str):
-    
-    result = search_wiki(value)
-    
+    result = search_wiki(value)  
     return{"results": result}
 
 @app.get("/wiki/{name}")
 async def wiki(name: str):
-    
     result = wiki(name)
-    
     return{"results": result}
 
 @app.get("/phrase/{name}")
 async def phrase(name: str):
-    
     result = phrases(name)
-    
     return{"results": result}
 
 if __name__ == '__main__':
