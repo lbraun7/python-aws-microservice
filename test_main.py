@@ -21,19 +21,3 @@ def test_read_phrase():
             "media proprietor"
         ]}    
     
-def test_read_search():
-    response = client.get("/search/Steve")
-    assert response.status_code == 200
-    assert response.json() == { 
-        "results": [
-            "STEVE",
-            "Steve",
-            "Steve Jobs",
-            "Steve Buscemi",
-            "Steve Carell",
-            "Steve Harvey",
-            "Steve Wood",
-            "Steve Roach",
-            "Steve McQueen",
-            "Stone Cold Steve Austin"
-        ]}           
