@@ -13,8 +13,8 @@ async def search(value: str):
     result = search_wiki(value)  
     return{"results": result}
 
-@app.get("/wiki/{name}")
-async def wiki(name: str):
+@app.get("/wikipedia/{name}")
+async def wikipedia(name: str):
     result = wiki(name)
     return{"results": result}
 
